@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>433</width>
+    <height>316</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>100</y>
+      <width>47</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>BUFF1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>146</y>
+      <width>80</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CALCULATE!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_damages">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>40</y>
+      <width>78</width>
+      <height>99</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>  Thatch: 0
+  Wood: 0
+  Stone: 0
+  Metal: 0
+  Dinos: 0
+  Players: 0
+  Torpor(Instant): 0
+  Torpor(debuff): 0
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>24</y>
+      <width>56</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DAMAGE TO: </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>53</y>
+      <width>110</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_damagepercent">
+         <property name="text">
+          <string>Damage %</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent">
+         <property name="minimum">
+          <double>100.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>300.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>24</y>
+      <width>156</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_Weapon">
+       <property name="text">
+        <string>Weapon</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_Weapon">
+       <item>
+        <property name="text">
+         <string>Stone Pick</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Stone Hatchet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Torch</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Metal Pick</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Metal Hatchet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Metal Sickle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pike</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Wooden Club</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Metal Sword</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Electric Prod</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Slingshot</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Wooden Bow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Crossbow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Compound Bow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Simple Pistol</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Longneck Rifle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Shotgun</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fabricated Pistol</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pump-Action Shotgun</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Assault Rifle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fabricated Sniper Rifle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rocket Launcher</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>122</y>
+      <width>168</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="text">
+        <string>AMMO1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="text">
+        <string>AMMO2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="text">
+        <string>AMMO3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>8</y>
+      <width>67</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_input">
+       <property name="text">
+        <string>INPUT</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_output">
+       <property name="text">
+        <string>OUTPUT</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>433</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
