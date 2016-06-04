@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.0.0, 2016-06-04T18:18:10. -->
+<!-- Written by QtCreator 4.0.0, 2016-06-03T16:59:16. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{a271d2d4-d041-4ec7-81fd-9b2cbd08c968}</value>
+  <value type="QByteArray">{9a41130e-3bc1-43ab-a93b-10ba4b3c2e27}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -285,8 +285,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">ARK-Survial-Evolved-damage-calculator</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">ARK-Survial-Evolved-damage-calculator2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/MJE/Documents/GitHub/ARK-Survial-Evolved-damage-calculator/ARK-Survial-Evolved-damage-calculator.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Matt/Documents/GitHub/ARK-Survial-Evolved-damage-calculator/ARK-Survial-Evolved-damage-calculator.pro</value>
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">ARK-Survial-Evolved-damage-calculator.pro</value>
