@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
+    <width>403</width>
     <height>383</height>
    </rect>
   </property>
@@ -39,6 +39,15 @@
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QLabel" name="label_Weapon">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
             <property name="text">
              <string>Weapon: </string>
             </property>
@@ -161,16 +170,21 @@
          </layout>
         </item>
         <item>
-         <widget class="QSlider" name="horizontalSlider">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QLabel" name="label_damagepercent">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::WinPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
             <property name="text">
              <string>Damage %</string>
             </property>
@@ -216,6 +230,19 @@
           </property>
          </widget>
         </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </item>
       <item>
@@ -247,6 +274,12 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLabel" name="label_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Raw Damage: </string>
             </property>
@@ -270,6 +303,12 @@
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="text">
                <string>Thatch: </string>
               </property>
@@ -336,32 +375,45 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_2"/>
+             <widget class="QLCDNumber" name="lcdNumber_thatchdamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_3"/>
+             <widget class="QLCDNumber" name="lcdNumber_wooddamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_4"/>
+             <widget class="QLCDNumber" name="lcdNumber_stonedamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_5"/>
+             <widget class="QLCDNumber" name="lcdNumber_metaldamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_6"/>
+             <widget class="QLCDNumber" name="lcdNumber_dinodamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_7"/>
+             <widget class="QLCDNumber" name="lcdNumber_playerdamage"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_8"/>
+             <widget class="QLCDNumber" name="lcdNumber_torporinstant"/>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_9"/>
+             <widget class="QLCDNumber" name="lcdNumber_torpordebuff"/>
             </item>
            </layout>
           </item>
          </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -381,7 +433,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>393</width>
+     <width>403</width>
      <height>21</height>
     </rect>
    </property>
