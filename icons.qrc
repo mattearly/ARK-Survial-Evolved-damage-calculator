@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>weapons-icons/Assault_Rifle.png</file>
+        <file>weapons-icons/Bow.png</file>
+        <file>weapons-icons/Compound_Bow.png</file>
+        <file>weapons-icons/Crossbow.png</file>
+        <file>weapons-icons/Electric_Prod.png</file>
+        <file>weapons-icons/Fabricated_Pistol.png</file>
+        <file>weapons-icons/Fabricated_Sniper_Rifle.png</file>
+        <file>weapons-icons/Longneck_Rifle.png</file>
+        <file>weapons-icons/Metal_Hatchet.png</file>
+        <file>weapons-icons/Metal_Pick.png</file>
+        <file>weapons-icons/Metal_Sickle.png</file>
+        <file>weapons-icons/Metal_Sword.png</file>
+        <file>weapons-icons/Pike.png</file>
+        <file>weapons-icons/Pump-Action_Shotgun.png</file>
+        <file>weapons-icons/Rocket_Launcher.png</file>
+        <file>weapons-icons/Shotgun.png</file>
+        <file>weapons-icons/Simple_Pistol.png</file>
+        <file>weapons-icons/Slingshot.png</file>
+        <file>weapons-icons/Stone_Hatchet.png</file>
+        <file>weapons-icons/Stone_Pick.png</file>
+        <file>weapons-icons/Torch.png</file>
+        <file>weapons-icons/Wooden_Club.png</file>
+    </qresource>
+</RCC>

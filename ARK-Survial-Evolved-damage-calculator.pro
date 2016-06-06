@@ -19,3 +19,6 @@ HEADERS  += mainwindow.h \
     defaultweapondamage.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    icons.qrc

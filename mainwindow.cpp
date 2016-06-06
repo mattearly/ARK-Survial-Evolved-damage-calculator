@@ -46,6 +46,7 @@ void MainWindow::on_pushButton_released()
         break;
     case 7:
         ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
         break;
     case 8:
         ui->lcdNumber_rawdamage->display((BaseDamage_METAL_SWORD) * (ui->doubleSpinBox_damagepercent->value() / 100));
@@ -124,8 +125,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 10:  //sling
         ui->radioButton_ammo1->setText("ROCK");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -134,7 +135,7 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     case 11:   //wood bow
         ui->radioButton_ammo1->setText("Stone Arrow");
         ui->radioButton_ammo2->setText("Tranq Arrow");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(true);
         ui->radioButton_ammo3->setEnabled(false);
@@ -143,16 +144,16 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     case 12:   //crossbow
         ui->radioButton_ammo1->setText("Stone Arrow");
         ui->radioButton_ammo2->setText("Tranq Arrow");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(true);
         ui->radioButton_ammo3->setEnabled(false);
         ui->radioButton_ammo1->setChecked(true);
         break;
     case 13:  //compound bow
-        ui->radioButton_ammo1->setText("Metal Arrow");
-        ui->radioButton_ammo2->setText("Stone Arrow");
-        ui->radioButton_ammo3->setText("Tranq Arrow");
+        ui->radioButton_ammo1->setText("Metal Arr");
+        ui->radioButton_ammo2->setText("Stone Arr");
+        ui->radioButton_ammo3->setText("Tranq Arr");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(true);
         ui->radioButton_ammo3->setEnabled(true);
@@ -160,8 +161,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 14:  //simple pistol
         ui->radioButton_ammo1->setText("Simple Bullet");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -170,7 +171,7 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     case 15:  //longneck rifle
         ui->radioButton_ammo1->setText("Simple Rifle Ammo");
         ui->radioButton_ammo2->setText("Dart");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(true);
         ui->radioButton_ammo3->setEnabled(false);
@@ -178,8 +179,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 16:  //double barrel shotgun
         ui->radioButton_ammo1->setText("Simple Shotgun Ammo");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -187,8 +188,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 17:   //fabricated pistol
         ui->radioButton_ammo1->setText("Advanced Bullet");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -196,8 +197,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 18:  //pump-action shotgun
         ui->radioButton_ammo1->setText("Simple Shotgun Ammo");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -205,8 +206,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 19: //assault rifle
         ui->radioButton_ammo1->setText("Advanced Rifle Bullet");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -214,8 +215,8 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 20:  //fabricated sniper rifle
         ui->radioButton_ammo1->setText("Advanced Sniper Bullet");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
@@ -223,17 +224,17 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     case 21:  //rocket launcher
         ui->radioButton_ammo1->setText("Rocket");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
         ui->radioButton_ammo1->setChecked(true);
         break;
     default:
-        ui->radioButton_ammo1->setText("Ammo1");
-        ui->radioButton_ammo2->setText("Ammo2");
-        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setText("Am1");
+        ui->radioButton_ammo2->setText("Am2");
+        ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(false);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
