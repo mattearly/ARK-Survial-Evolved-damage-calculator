@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>971</width>
-    <height>265</height>
+    <width>1179</width>
+    <height>424</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,11 +20,11 @@
    <string>ARK Damage Calculator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_5">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
         <item>
          <widget class="QLabel" name="label_input">
           <property name="sizePolicy">
@@ -32,6 +32,22 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>5</number>
           </property>
           <property name="text">
            <string>INPUT</string>
@@ -42,188 +58,292 @@
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
-           <widget class="QLabel" name="label_Weapon">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::WinPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="lineWidth">
-             <number>2</number>
-            </property>
-            <property name="text">
-             <string>Weapon: </string>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_Weapon">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>2</number>
+              </property>
+              <property name="text">
+               <string>Weapon: </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_damagepercent">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::WinPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>2</number>
+              </property>
+              <property name="text">
+               <string>Damage %</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_Weapon">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
+           <layout class="QVBoxLayout" name="verticalLayout">
             <item>
-             <property name="text">
-              <string>Stone Pick</string>
-             </property>
+             <widget class="QComboBox" name="comboBox_Weapon">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <item>
+               <property name="text">
+                <string>Stone Pick</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Stone Hatchet</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Torch</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Metal Pick</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Metal Hatchet</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Metal Sickle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Pike</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Wooden Club</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Metal Sword</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Electric Prod</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Slingshot</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Wooden Bow</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Crossbow</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Compound Bow</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Simple Pistol</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Longneck Rifle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Shotgun</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Fabricated Pistol</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Pump-Action Shotgun</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Assault Rifle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Fabricated Sniper Rifle</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Rocket Launcher</string>
+               </property>
+              </item>
+             </widget>
             </item>
             <item>
-             <property name="text">
-              <string>Stone Hatchet</string>
-             </property>
+             <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="minimum">
+               <double>100.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>650.000000000000000</double>
+              </property>
+             </widget>
             </item>
-            <item>
-             <property name="text">
-              <string>Torch</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Metal Pick</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Metal Hatchet</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Metal Sickle</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Pike</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Wooden Club</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Metal Sword</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Electric Prod</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Slingshot</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Wooden Bow</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Crossbow</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Compound Bow</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Simple Pistol</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Longneck Rifle</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Shotgun</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Fabricated Pistol</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Pump-Action Shotgun</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Assault Rifle</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Fabricated Sniper Rifle</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Rocket Launcher</string>
-             </property>
-            </item>
-           </widget>
+           </layout>
           </item>
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QLabel" name="label_damagepercent">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+           <widget class="QRadioButton" name="radioButton_ammo1">
+            <property name="enabled">
+             <bool>false</bool>
             </property>
-            <property name="frameShape">
-             <enum>QFrame::WinPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="lineWidth">
-             <number>2</number>
+            <property name="font">
+             <font>
+              <pointsize>7</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
             </property>
             <property name="text">
-             <string>Damage %</string>
+             <string>Ammo1</string>
+            </property>
+            <property name="shortcut">
+             <string>1</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+           <widget class="QRadioButton" name="radioButton_ammo2">
+            <property name="enabled">
+             <bool>false</bool>
             </property>
-            <property name="minimum">
-             <double>100.000000000000000</double>
+            <property name="font">
+             <font>
+              <pointsize>7</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
             </property>
-            <property name="maximum">
-             <double>650.000000000000000</double>
+            <property name="text">
+             <string>Ammo2</string>
+            </property>
+            <property name="shortcut">
+             <string>2</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_ammo3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>7</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Ammo3</string>
+            </property>
+            <property name="shortcut">
+             <string>3</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -232,14 +352,7 @@
        </layout>
       </item>
       <item>
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
          <widget class="QLabel" name="label_output">
           <property name="sizePolicy">
@@ -247,6 +360,22 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::WinPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>5</number>
           </property>
           <property name="text">
            <string>OUTPUT</string>
@@ -259,14 +388,19 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QLabel" name="label_6">
+             <widget class="QLabel" name="label_RawDamage">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
               </property>
               <property name="frameShape">
                <enum>QFrame::WinPanel</enum>
@@ -283,12 +417,17 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="label_InstantTorpor">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
               </property>
               <property name="frameShape">
                <enum>QFrame::WinPanel</enum>
@@ -305,12 +444,17 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="label_TorporOverTime">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
               </property>
               <property name="frameShape">
                <enum>QFrame::WinPanel</enum>
@@ -327,12 +471,17 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="label_TotalTorpor">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
               </property>
               <property name="frameShape">
                <enum>QFrame::WinPanel</enum>
@@ -358,11 +507,11 @@
            </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QLCDNumber" name="lcdNumber_rawdamage">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -397,7 +546,7 @@
             <item>
              <widget class="QLCDNumber" name="lcdNumber_InstantTorpor">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -430,9 +579,9 @@
              </widget>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber">
+             <widget class="QLCDNumber" name="lcdNumber_TorporOverTime">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -465,9 +614,9 @@
              </widget>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcdNumber_2">
+             <widget class="QLCDNumber" name="lcdNumber_TotalTorpor">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -509,8 +658,18 @@
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>CALCULATE!</string>
+      </property>
+      <property name="shortcut">
+       <string>Return</string>
       </property>
      </widget>
     </item>
@@ -521,7 +680,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>971</width>
+     <width>1179</width>
      <height>19</height>
     </rect>
    </property>

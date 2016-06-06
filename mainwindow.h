@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_released();
 
+    void on_comboBox_Weapon_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
 };

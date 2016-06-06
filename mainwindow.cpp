@@ -52,6 +52,7 @@ void MainWindow::on_pushButton_released()
         break;
     case 9:
         ui->lcdNumber_rawdamage->display(1);  //electric prod
+       // ui->lcdNu
         break;
     case 10:
         ui->lcdNumber_rawdamage->display((BaseDamage_SLINGSHOT) * (ui->doubleSpinBox_damagepercent->value() / 100));
@@ -97,6 +98,145 @@ void MainWindow::on_pushButton_released()
         break;
     default:
         ui->lcdNumber_rawdamage->display(0);
+        break;
+    }
+}
+
+void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+        ui->radioButton_ammo1->setText("Ammo1");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(false);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        break;
+    case 10:  //sling
+        ui->radioButton_ammo1->setText("ROCK");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 11:   //wood bow
+        ui->radioButton_ammo1->setText("Stone Arrow");
+        ui->radioButton_ammo2->setText("Tranq Arrow");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(true);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 12:   //crossbow
+        ui->radioButton_ammo1->setText("Stone Arrow");
+        ui->radioButton_ammo2->setText("Tranq Arrow");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(true);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 13:  //compound bow
+        ui->radioButton_ammo1->setText("Metal Arrow");
+        ui->radioButton_ammo2->setText("Stone Arrow");
+        ui->radioButton_ammo3->setText("Tranq Arrow");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(true);
+        ui->radioButton_ammo3->setEnabled(true);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 14:  //simple pistol
+        ui->radioButton_ammo1->setText("Simple Bullet");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 15:  //longneck rifle
+        ui->radioButton_ammo1->setText("Simple Rifle Ammo");
+        ui->radioButton_ammo2->setText("Dart");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(true);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 16:  //double barrel shotgun
+        ui->radioButton_ammo1->setText("Simple Shotgun Ammo");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 17:   //fabricated pistol
+        ui->radioButton_ammo1->setText("Advanced Bullet");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 18:  //pump-action shotgun
+        ui->radioButton_ammo1->setText("Simple Shotgun Ammo");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 19: //assault rifle
+        ui->radioButton_ammo1->setText("Advanced Rifle Bullet");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 20:  //fabricated sniper rifle
+        ui->radioButton_ammo1->setText("Advanced Sniper Bullet");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    case 21:  //rocket launcher
+        ui->radioButton_ammo1->setText("Rocket");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(true);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
+        ui->radioButton_ammo1->setChecked(true);
+        break;
+    default:
+        ui->radioButton_ammo1->setText("Ammo1");
+        ui->radioButton_ammo2->setText("Ammo2");
+        ui->radioButton_ammo3->setText("Ammo3");
+        ui->radioButton_ammo1->setEnabled(false);
+        ui->radioButton_ammo2->setEnabled(false);
+        ui->radioButton_ammo3->setEnabled(false);
         break;
     }
 }
