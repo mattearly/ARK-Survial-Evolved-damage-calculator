@@ -2,12 +2,19 @@
 #include "ui_mainwindow.h"
 #include "defaultweapondamage.h"
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QGraphicsScene *scene;
+    scene = new QGraphicsScene(this);
+//    ui->graphicsView_WeaponIcon->setScene(scene);
+    QPixmap WeaponIcon(":/weapons-icon/default.png");
+    scene->addPixmap(WeaponIcon);
+    ui->graphicsView_WeaponIcon->setScene(scene);
+
 }
 
 MainWindow::~MainWindow()
@@ -22,6 +29,15 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_pushButton_released()
 {
+    //reset lcds
+    ui->lcdNumber_rawdamage->display(0);
+    ui->lcdNumber_InstantTorpor->display(0);
+    ui->lcdNumber_TorporOverTime->display(0);
+    ui->lcdNumber_TotalTorpor->display(0);
+
+    //tmp variables for calculating certain cases
+    float tmp(0.f), tmp2(0.f), tmp3(0.f);
+
     switch (ui->comboBox_Weapon->currentIndex()) {
     case 0:
         ui->lcdNumber_rawdamage->display((BaseDamage_STONE_PICK) * (ui->doubleSpinBox_damagepercent->value() / 100));
@@ -46,38 +62,78 @@ void MainWindow::on_pushButton_released()
         break;
     case 7:
         ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        ui->lcdNumber_InstantTorpor->display((BaseTorpor_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        ui->lcdNumber_TotalTorpor->display((BaseTorpor_WOODEN_CLUB) * (ui->doubleSpinBox_damagepercent->value() / 100));
         break;
     case 8:
         ui->lcdNumber_rawdamage->display((BaseDamage_METAL_SWORD) * (ui->doubleSpinBox_damagepercent->value() / 100));
         break;
     case 9:
         ui->lcdNumber_rawdamage->display(1);  //electric prod
-       // ui->lcdNu
+        tmp = (BaseTorpor_ELECTRIC_PROD) * (ui->doubleSpinBox_damagepercent->value() / 100);
+        ui->lcdNumber_InstantTorpor->display(tmp);
+        ui->lcdNumber_TotalTorpor->display(tmp);
         break;
     case 10:
         ui->lcdNumber_rawdamage->display((BaseDamage_SLINGSHOT) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        //+torpor
+        tmp = (BaseTorpor_SLINGSHOT) * (ui->doubleSpinBox_damagepercent->value() / 100);
+        ui->lcdNumber_InstantTorpor->display(tmp);
+        ui->lcdNumber_TotalTorpor->display(tmp);
         break;
     case 11:
-        ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_BOW_STONE_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        //+tranq arrow version
+        if (ui->radioButton_ammo1->isChecked()) {  //normal arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_BOW_STONE_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        } else {  //tranq arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_WOODEN_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+            tmp = (BaseTorpor_WOODEN_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_InstantTorpor->display(tmp);
+            tmp2 = (DotTorpor_WOODEN_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_TorporOverTime->display(tmp2);
+            ui->lcdNumber_TotalTorpor->display(tmp + tmp2);
+        }
         break;
     case 12:
-        ui->lcdNumber_rawdamage->display((BaseDamage_CROSSBOW_STONE_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        //+tranq arrow version
+        if (ui->radioButton_ammo1->isChecked()) {  //normal arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_CROSSBOW_STONE_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        } else {  //tranq arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_CROSSBOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+            tmp = (BaseTorpor_CROSSBOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_InstantTorpor->display(tmp);
+            tmp2 = (DotTorpor_CROSSBOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_TorporOverTime->display(tmp2);
+            ui->lcdNumber_TotalTorpor->display(tmp + tmp2);
+        }
         break;
     case 13:
-        ui->lcdNumber_rawdamage->display((BaseDamage_COMPOUND_BOW_METAL_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        //+stone arrow version
-        //+tranq arrow version
+        if (ui->radioButton_ammo1->isChecked()) {  //metal arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_COMPOUND_BOW_METAL_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        } else if (ui->radioButton_ammo2->isChecked()) {  //normal arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_COMPOUND_BOW_STONE_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        } else { //tranq arrow
+            ui->lcdNumber_rawdamage->display((BaseDamage_COMPOUND_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100));
+            tmp = (BaseTorpor_COMPOUND_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_InstantTorpor->display(tmp);
+            tmp2 = (DotTorpor_COMPOUND_BOW_TRANQ_ARROW) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_TorporOverTime->display(tmp2);
+            ui->lcdNumber_TotalTorpor->display(tmp + tmp2);
+        }
         break;
     case 14:
         ui->lcdNumber_rawdamage->display((BaseDamage_SIMPLE_PISTOL) * (ui->doubleSpinBox_damagepercent->value() / 100));
         break;
     case 15:
-        ui->lcdNumber_rawdamage->display((BaseDamage_LONGNECK_RIFLE) * (ui->doubleSpinBox_damagepercent->value() / 100));
-        //+dart version
+        if (ui->radioButton_ammo1->isChecked()) { //simple rifle ammo
+            ui->lcdNumber_rawdamage->display((BaseDamage_LONGNECK_RIFLE) * (ui->doubleSpinBox_damagepercent->value() / 100));
+        } else { //dart
+            tmp = (BaseDamage_LONGNECK_RIFLE_DART) * (ui->doubleSpinBox_damagepercent->value() / 100);
+            ui->lcdNumber_rawdamage->display(tmp);
+            tmp2 = (tmp * 6);
+            ui->lcdNumber_InstantTorpor->display(tmp2);
+            tmp3 = (tmp * 2.5);
+            ui->lcdNumber_TorporOverTime->display(tmp3);
+            ui->lcdNumber_TotalTorpor->display(tmp2 + tmp3);
+
+        }
         break;
     case 16:
         ui->lcdNumber_rawdamage->display((BaseDamage_SHOTGUN) * (ui->doubleSpinBox_damagepercent->value() / 100));
@@ -124,7 +180,7 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         ui->radioButton_ammo3->setEnabled(false);
         break;
     case 10:  //sling
-        ui->radioButton_ammo1->setText("ROCK");
+        ui->radioButton_ammo1->setText("Stone");
         ui->radioButton_ammo2->setText("Am2");
         ui->radioButton_ammo3->setText("Am3");
         ui->radioButton_ammo1->setEnabled(true);
@@ -238,6 +294,16 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         ui->radioButton_ammo1->setEnabled(false);
         ui->radioButton_ammo2->setEnabled(false);
         ui->radioButton_ammo3->setEnabled(false);
+        break;
+    }
+
+    switch (index) {
+    case 1:
+//        weaponIcon.setBackgroundBrush(QImage(":/weapons-icons/Stone_Pick.png"));
+        break;
+    case 2:
+        break;
+    default:
         break;
     }
 }
