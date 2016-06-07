@@ -16,7 +16,8 @@ SOURCES += main.cpp\
         mainwindow.cpp
 
 HEADERS  += mainwindow.h \
-    defaultweapondamage.h
+    defaultweapondamage.h \
+    weaponurls.h
 
 FORMS    += mainwindow.ui
 

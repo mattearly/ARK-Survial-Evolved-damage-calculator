@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "defaultweapondamage.h"
 #include <QIcon>
+#include "weaponurls.h"
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
     ui->pushButton_webLink->setIconSize(QSize(248,248));
-
 }
 
 MainWindow::~MainWindow()
@@ -291,72 +292,100 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     switch (index) {
     case 0:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Pick.png"));
+        wikilink = arkWiki_Stone_Pick;
         break;
     case 1:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Hatchet.png"));
+        wikilink = arkWiki_Stone_Hatchet;
         break;
     case 2:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Torch.png"));
+        wikilink = arkWiki_Torch;
         break;
     case 3:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Pick.png"));
+        wikilink = arkWiki_Metal_Pick;
         break;
     case 4:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Hatchet.png"));
+        wikilink = arkWiki_Metal_Hatchet;
         break;
     case 5:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Sickle.png"));
+        wikilink = arkWiki_Metal_Sickle;
         break;
     case 6:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Pike.png"));
+        wikilink = arkWiki_Pike;
         break;
     case 7:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Wooden_Club.png"));
+        wikilink = arkWiki_Wooden_Club;
         break;
     case 8:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Sword.png"));
+        wikilink = arkWiki_Metal_Sword;
         break;
     case 9:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Electric_Prod.png"));
+        wikilink = arkWiki_Electric_Prod;
         break;
     case 10:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Slingshot.png"));
+        wikilink = arkWiki_Slingshot;
         break;
     case 11:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Bow.png"));
+        wikilink = arkWiki_Bow;
         break;
     case 12:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Crossbow.png"));
+        wikilink = arkWiki_Crossbow;
         break;
     case 13:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Compound_Bow.png"));
+        wikilink = arkWiki_Compound_Bow;
         break;
     case 14:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Simple_Pistol.png"));
+        wikilink = arkWiki_Simple_Pistol;
         break;
     case 15:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Longneck_Rifle.png"));
+        wikilink = arkWiki_Longneck_Rifle;
         break;
     case 16:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Shotgun.png"));
+        wikilink = arkWiki_Shotgun;
         break;
     case 17:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Fabricated_Pistol.png"));
+        wikilink = arkWiki_Fabricated_Pistol;
         break;
     case 18:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Pump-Action_Shotgun.png"));
+        wikilink = arkWiki_Pump_Action_Shotgun;
         break;
     case 19:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Assault_Rifle.png"));
+        wikilink = arkWiki_Assault_Rifle;
         break;
     case 20:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Fabricated_Sniper_Rifle.png"));
+        wikilink = arkWiki_Fabricated_Sniper_Rifle;
         break;
     case 21:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Rocket_Launcher.png"));
+        wikilink = arkWiki_Rocket_Launcher;
         break;
     default:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
+        wikilink = arkWiki_Default;
         break;
     }
+}
+
+void MainWindow::on_pushButton_webLink_released()
+{
+    QDesktopServices::openUrl(wikilink);
 }

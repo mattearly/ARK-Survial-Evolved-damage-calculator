@@ -21,6 +21,8 @@ private slots:
 
     void on_comboBox_Weapon_currentIndexChanged(int index);
 
+    void on_pushButton_webLink_released();
+
 private:
     Ui::MainWindow *ui;
 };
