@@ -16,7 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_actionExit_triggered();
 
     void on_pushButton_released();
 

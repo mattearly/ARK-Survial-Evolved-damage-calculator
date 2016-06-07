@@ -18,11 +18,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_actionExit_triggered()
-{
-    QApplication::quit();
-}
-
 void MainWindow::on_pushButton_released()
 {
     //reset lcds
