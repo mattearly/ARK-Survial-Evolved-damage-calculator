@@ -1,19 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "defaultweapondamage.h"
+#include <QIcon>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    QGraphicsScene *scene;
-    scene = new QGraphicsScene(this);
-//    ui->graphicsView_WeaponIcon->setScene(scene);
-    QPixmap WeaponIcon(":/weapons-icon/default.png");
-    scene->addPixmap(WeaponIcon);
-    ui->graphicsView_WeaponIcon->setScene(scene);
+    ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
+    ui->pushButton_webLink->setIconSize(QSize(248,248));
 
 }
 
@@ -298,12 +294,74 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     }
 
     switch (index) {
+    case 0:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Pick.png"));
+        break;
     case 1:
-//        weaponIcon.setBackgroundBrush(QImage(":/weapons-icons/Stone_Pick.png"));
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Hatchet.png"));
         break;
     case 2:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Torch.png"));
+        break;
+    case 3:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Pick.png"));
+        break;
+    case 4:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Hatchet.png"));
+        break;
+    case 5:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Sickle.png"));
+        break;
+    case 6:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Pike.png"));
+        break;
+    case 7:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Wooden_Club.png"));
+        break;
+    case 8:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Metal_Sword.png"));
+        break;
+    case 9:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Electric_Prod.png"));
+        break;
+    case 10:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Slingshot.png"));
+        break;
+    case 11:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Bow.png"));
+        break;
+    case 12:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Crossbow.png"));
+        break;
+    case 13:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Compound_Bow.png"));
+        break;
+    case 14:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Simple_Pistol.png"));
+        break;
+    case 15:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Longneck_Rifle.png"));
+        break;
+    case 16:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Shotgun.png"));
+        break;
+    case 17:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Fabricated_Pistol.png"));
+        break;
+    case 18:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Pump-Action_Shotgun.png"));
+        break;
+    case 19:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Assault_Rifle.png"));
+        break;
+    case 20:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Fabricated_Sniper_Rifle.png"));
+        break;
+    case 21:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Rocket_Launcher.png"));
         break;
     default:
+        ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
         break;
     }
 }

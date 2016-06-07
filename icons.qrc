@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="/weapons">
+        <file>weapons-icons/default.png</file>
         <file>weapons-icons/Assault_Rifle.png</file>
         <file>weapons-icons/Bow.png</file>
         <file>weapons-icons/Compound_Bow.png</file>

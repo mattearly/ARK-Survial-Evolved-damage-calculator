@@ -32,7 +32,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QGraphicsView" name="graphicsView_WeaponIcon">
+         <widget class="QPushButton" name="pushButton_webLink">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -45,20 +45,8 @@
             <height>256</height>
            </size>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>256</width>
-            <height>256</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/weapons-icons/Assault_Rifle.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-          <property name="verticalScrollBarPolicy">
-           <enum>Qt::ScrollBarAlwaysOff</enum>
-          </property>
-          <property name="horizontalScrollBarPolicy">
-           <enum>Qt::ScrollBarAlwaysOff</enum>
+          <property name="text">
+           <string/>
           </property>
          </widget>
         </item>
@@ -761,28 +749,6 @@
      </widget>
     </item>
    </layout>
-   <zorder>line_3</zorder>
-   <zorder>comboBox_Weapon</zorder>
-   <zorder>doubleSpinBox_damagepercent</zorder>
-   <zorder>radioButton_ammo2</zorder>
-   <zorder>radioButton_ammo1</zorder>
-   <zorder>radioButton_ammo3</zorder>
-   <zorder>line_2</zorder>
-   <zorder>label_RawDamage</zorder>
-   <zorder>label_TorporOverTime</zorder>
-   <zorder>label_InstantTorpor</zorder>
-   <zorder>label_TotalTorpor</zorder>
-   <zorder>lcdNumber_InstantTorpor</zorder>
-   <zorder>lcdNumber_TorporOverTime</zorder>
-   <zorder>lcdNumber_rawdamage</zorder>
-   <zorder>lcdNumber_TotalTorpor</zorder>
-   <zorder>label_damagepercent</zorder>
-   <zorder>label_Weapon</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>label_input</zorder>
-   <zorder>graphicsView_WeaponIcon</zorder>
-   <zorder>label_output</zorder>
-   <zorder>line</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
