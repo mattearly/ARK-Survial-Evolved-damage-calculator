@@ -10,8 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowIcon(QIcon(":/taskbar/program-icon/arkdc.ico"));
-
+//    this->setWindowIcon(QIcon(":/taskbar/arkdc.ico"));
     ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
     ui->pushButton_webLink->setIconSize(QSize(248,248));
 }

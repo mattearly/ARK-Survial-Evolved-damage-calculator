@@ -25,6 +25,6 @@
         <file>weapons-icons/Wooden_Club.png</file>
     </qresource>
     <qresource prefix="/taskbar">
-        <file>program-icon/arkdc.ico</file>
+        <file>arkdc.ico</file>
     </qresource>
 </RCC>
