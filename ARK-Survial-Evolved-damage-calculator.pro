@@ -23,3 +23,5 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     icons.qrc
+
+RC_ICONS = \program-icon\arkdc.ico

@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/weapons">
-        <file>weapons-icons/default.png</file>
         <file>weapons-icons/Assault_Rifle.png</file>
         <file>weapons-icons/Bow.png</file>
         <file>weapons-icons/Compound_Bow.png</file>
         <file>weapons-icons/Crossbow.png</file>
+        <file>weapons-icons/default.png</file>
         <file>weapons-icons/Electric_Prod.png</file>
         <file>weapons-icons/Fabricated_Pistol.png</file>
         <file>weapons-icons/Fabricated_Sniper_Rifle.png</file>
@@ -23,5 +23,8 @@
         <file>weapons-icons/Stone_Pick.png</file>
         <file>weapons-icons/Torch.png</file>
         <file>weapons-icons/Wooden_Club.png</file>
+    </qresource>
+    <qresource prefix="/taskbar">
+        <file>program-icon/arkdc.ico</file>
     </qresource>
 </RCC>
