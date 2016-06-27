@@ -51,6 +51,6 @@ static constexpr const float BaseDamage_ASSAULT_RIFLE = 59.4f;
 static constexpr const unsigned int BaseDamage_FABRICATED_SNIPER_RIFLE = 165;
 
 //EXPLOSIVES WEAPONS DAMAGE
-static constexpr const unsigned int BaseDamage_ROCKET_LAUNCHER = 1000;
+static constexpr const unsigned int BaseDamage_ROCKET_LAUNCHER = 1500;
 
 #endif // DEFAULTWEAPONDAMAGE_H
