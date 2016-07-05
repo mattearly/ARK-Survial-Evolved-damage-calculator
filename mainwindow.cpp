@@ -154,6 +154,9 @@ void MainWindow::on_pushButton_released()
 
 void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
 {
+    if (ui->doubleSpinBox_damagepercent->value() != 100) {
+        ui->doubleSpinBox_damagepercent->setValue(100.00);
+    }
     switch (index) {
     case 0:
     case 1:
