@@ -1,0 +1,1 @@
+v0005 - updated rocket launcher damage to be correct. damage % now resets when you change the weapon dropdown.
