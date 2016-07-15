@@ -157,7 +157,7 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
     if (ui->doubleSpinBox_damagepercent->value() != 100) {
         ui->doubleSpinBox_damagepercent->setValue(100.00);
     }
-    switch (index) {
+    switch (index) {  //switches ammo radio buttons
     case 0:
     case 1:
     case 2:
@@ -293,7 +293,7 @@ void MainWindow::on_comboBox_Weapon_currentIndexChanged(int index)
         break;
     }
 
-    switch (index) {
+    switch (index) {  //updates web link to currently selected weapon
     case 0:
         ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Pick.png"));
         wikilink = arkWiki_Stone_Pick;
