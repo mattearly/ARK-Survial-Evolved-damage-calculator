@@ -17,7 +17,9 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     defaultweapondamage.h \
-    weaponurls.h
+    weaponurls.h \
+    defaultdinodamage.h \
+    dinourls.h
 
 FORMS    += mainwindow.ui
 
