@@ -47,6 +47,7 @@ static constexpr const unsigned int BaseDamage_MOSASAURUS = 100;
 static constexpr const unsigned int BaseDamage_ONYC = 25;
 static constexpr const unsigned int BaseDamage_OVIRAPTOR = 12;
 static constexpr const unsigned int BaseDamage_PACHY = 10;
+static constexpr const unsigned int BaseDamage_PACHY_charge = 17;
 static constexpr const unsigned int BaseDamage_PARACERATHERIUM = 45;
 static constexpr const unsigned int BaseDamage_PARASAUR = 10;
 static constexpr const unsigned int BaseDamage_PELAGORNIS = 16;
@@ -55,7 +56,7 @@ static constexpr const unsigned int BaseDamage_PHIOMIA = 10;
 static constexpr const unsigned int BaseDamage_PLESIOSAUR = 75;
 static constexpr const unsigned int BaseDamage_PROCOPTODON = 20;
 static constexpr const unsigned int BaseDamage_PTERANODON = 15;
-static constexpr const unsigned int BaseDamage_PTERANODON_rollAttack = 36;
+static constexpr const unsigned int BaseDamage_PTERANODON_rollAttack = 300;
 static constexpr const unsigned int BaseDamage_PULMONOSCORPIUS = 20;
 static constexpr const unsigned int BaseDamage_QUETZAL = 32;
 static constexpr const unsigned int BaseDamage_RAPTOR = 15;
@@ -72,7 +73,7 @@ static constexpr const unsigned int BaseDamage_TRICERATOPS = 32;
 //static constexpr const unsigned int BaseDamage_TRILOBITE = 8;
 static constexpr const unsigned int BaseDamage_TYRANNOSAURUS = 60;
 static constexpr const unsigned int BaseDamage_WOOLLYRHINO = 40;
-static constexpr const unsigned int BaseDamage_WOOLLYRHINO_altFire = 68;
+//static constexpr const unsigned int BaseDamage_WOOLLYRHINO_charge = 68;  //conflicting info on wiki
 
 
 #endif // DEFAULTDINODAMAGE_H

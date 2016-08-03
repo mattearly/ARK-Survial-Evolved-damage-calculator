@@ -13,9 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 //    this->setWindowIcon(QIcon(":/taskbar/arkdc.ico"));
-    ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
+    ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Pick.png"));
     ui->pushButton_webLink->setIconSize(QSize(248,248));
-    ui->pushButton_webLink_2->setIcon(QIcon(":/weapons/weapons-icons/default.png"));
+    ui->pushButton_webLink_2->setIcon(QIcon(":/dinos/dinos-icons/Allosaurus.png"));
     ui->pushButton_webLink_2->setIconSize(QSize(248,248));
 }
 
@@ -23,6 +23,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+/*SECTION 1 DAMAGES */
 
 //WEAPON DAMAGE
 
@@ -432,6 +435,8 @@ void MainWindow::on_pushButton_2_released()
         break;
     case 6:
         ui->lcdNumber_rawdamage_2->display((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+        ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
         break;
     case 7:
         ui->lcdNumber_rawdamage_2->display((BaseDamage_BRONTOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
@@ -522,7 +527,15 @@ void MainWindow::on_pushButton_2_released()
         ui->lcdNumber_rawdamage_2->display((BaseDamage_OVIRAPTOR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
         break;
     case 36:
-        ui->lcdNumber_rawdamage_2->display((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        if (ui->radioButton_ammo1_2->isChecked()) {
+            ui->lcdNumber_rawdamage_2->display((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+            ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100)));
+            ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100)));
+       } else {
+            ui->lcdNumber_rawdamage_2->display((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+            ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3.5);
+            ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3.5);
+        }
         break;
     case 37:
         ui->lcdNumber_rawdamage_2->display((BaseDamage_PARACERATHERIUM) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
@@ -548,6 +561,8 @@ void MainWindow::on_pushButton_2_released()
         break;
     case 44:
         ui->lcdNumber_rawdamage_2->display((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+        ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
         break;
     case 45:
         ui->lcdNumber_rawdamage_2->display((BaseDamage_QUETZAL) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
@@ -581,7 +596,7 @@ void MainWindow::on_pushButton_2_released()
         break;
     case 55:
         (ui->radioButton_ammo1_2->isChecked()) ? ui->lcdNumber_rawdamage_2->display((BaseDamage_WOOLLYRHINO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))
-            : ui->lcdNumber_rawdamage_2->display((BaseDamage_WOOLLYRHINO_altFire) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+            : ui->lcdNumber_rawdamage_2->display(((BaseDamage_WOOLLYRHINO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*12.5);
         break;
     default:
         break;
@@ -596,9 +611,16 @@ void MainWindow::on_comboBox_Dinosaur_currentIndexChanged(int index)
     switch (index) {
     case 5:
     case 16:
-    case 55:
         ui->radioButton_ammo1_2->setText("Attack1");
         ui->radioButton_ammo2_2->setText("Attack2");
+        ui->radioButton_ammo1_2->setEnabled(true);
+        ui->radioButton_ammo2_2->setEnabled(true);
+        ui->radioButton_ammo1_2->setChecked(true);
+        break;
+    case 36:
+    case 55:
+        ui->radioButton_ammo1_2->setText("Attack1");
+        ui->radioButton_ammo2_2->setText("Charge");
         ui->radioButton_ammo1_2->setEnabled(true);
         ui->radioButton_ammo2_2->setEnabled(true);
         ui->radioButton_ammo1_2->setChecked(true);
@@ -855,4 +877,5 @@ void MainWindow::on_pushButton_webLink_2_released()
     QDesktopServices::openUrl(wikilink_2);
 }
 
+/*SECTION 2 OTHER TOOLS */
 
