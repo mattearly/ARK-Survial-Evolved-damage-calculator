@@ -1,16 +1,16 @@
 #ifndef DINOURLS_H
 #define DINOURLS_H
+#include <QUrl>
 
 //dinos that cannot be tamed have been commented out as the data won't be used currently
 
-static const QUrl arkWiki_default("http://ark.gamepedia.com/Dinosaurs");
+static const QUrl arkWiki_defaultDino("http://ark.gamepedia.com/Dinosaurs");
 static const QUrl arkWiki_ALLOSAURUS("http://ark.gamepedia.com/Allosaurus");
 static const QUrl arkWiki_ANGLER("http://ark.gamepedia.com/Angler");
 static const QUrl arkWiki_ANKYLOSAURUS("http://ark.gamepedia.com/Ankylosaurus");
 static const QUrl arkWiki_ARANEO("http://ark.gamepedia.com/Araneo");
 static const QUrl arkWiki_ARGENTAVIS("http://ark.gamepedia.com/Argentavis");
 static const QUrl arkWiki_ARTHROPLUERA("http://ark.gamepedia.com/Arthropluera");
-static const QUrl arkWiki_ARTHROPLUERA_altFire("http://ark.gamepedia.com/Arthropluera");
 static const QUrl arkWiki_BEELZEBUFO("http://ark.gamepedia.com/Beelzebufo");
 static const QUrl arkWiki_BRONTOSAURUS("http://ark.gamepedia.com/Brontosaurus");
 static const QUrl arkWiki_CARBONEMYS("http://ark.gamepedia.com/Carbonemys");
@@ -27,7 +27,7 @@ static const QUrl arkWiki_DIREWOLF("http://ark.gamepedia.com/DireWolf");
 static const QUrl arkWiki_DODO("http://ark.gamepedia.com/Dodo");
 static const QUrl arkWiki_DOEDICURUS("http://ark.gamepedia.com/Doedicurus");
 //static const QUrl arkWiki_DRAGONFLY("http://ark.gamepedia.com/Dragonfly");
-static const QUrl arkWiki_BUNGBEETLE("http://ark.gamepedia.com/Dung_Beetle");
+static const QUrl arkWiki_DUNGBEETLE("http://ark.gamepedia.com/Dung_Beetle");
 static const QUrl arkWiki_DUNKLEOSTEUS("http://ark.gamepedia.com/Dunkleosteus");
 static const QUrl arkWiki_EURYPTERID("http://ark.gamepedia.com/Eurypterid");
 static const QUrl arkWiki_GALLIMIMUS("http://ark.gamepedia.com/Gallimimus");
@@ -50,7 +50,7 @@ static const QUrl arkWiki_PARACERATHERIUM("http://ark.gamepedia.com/Paracerather
 static const QUrl arkWiki_PARASAUR("http://ark.gamepedia.com/Parasaur");
 static const QUrl arkWiki_PELAGORNIS("http://ark.gamepedia.com/Pelagornis");
 static const QUrl arkWiki_PHIOMIA("http://ark.gamepedia.com/Phiomia");
-static const QUrl arkWiki_PIRANHA("http://ark.gamepedia.com/Piranha");
+//static const QUrl arkWiki_PIRANHA("http://ark.gamepedia.com/Piranha");
 static const QUrl arkWiki_PLESIOSAUR("http://ark.gamepedia.com/Plesiosaur");
 static const QUrl arkWiki_PROCOPTODON("http://ark.gamepedia.com/Procoptodon");
 static const QUrl arkWiki_PTERANODON("http://ark.gamepedia.com/Pteranodon");
@@ -70,6 +70,8 @@ static const QUrl arkWiki_TRICERATOPS("http://ark.gamepedia.com/Triceratops");
 //static const QUrl arkWiki_TRILOBITE("http://ark.gamepedia.com/Trilobite");
 static const QUrl arkWiki_TYRANNOSAURUS("http://ark.gamepedia.com/Tyrannosaurus");
 static const QUrl arkWiki_WOOLLYRHINO("http://ark.gamepedia.com/Wooly_Rhino");
+
+static QUrl wikilink_2(arkWiki_defaultDino);
 
 
 #endif // DINOURLS_H

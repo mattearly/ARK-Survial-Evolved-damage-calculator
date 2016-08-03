@@ -17,11 +17,21 @@ public:
 
 private slots:
 
+
+    //weapon stuff
     void on_pushButton_released();
 
     void on_comboBox_Weapon_currentIndexChanged(int index);
 
     void on_pushButton_webLink_released();
+
+    //dino stuff
+    void on_pushButton_2_released();
+
+    void on_comboBox_Dinosaur_currentIndexChanged(int index);
+
+    void on_pushButton_webLink_2_released();
+
 
 private:
     Ui::MainWindow *ui;

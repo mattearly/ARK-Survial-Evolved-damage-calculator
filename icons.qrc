@@ -33,7 +33,6 @@
         <file>dinos-icons/Ankylosaurus.png</file>
         <file>dinos-icons/Argentavis.png</file>
         <file>dinos-icons/Arthropluera.png</file>
-        <file>dinos-icons/Bat.png</file>
         <file>dinos-icons/Beelzebufo.png</file>
         <file>dinos-icons/Brontosaurus.png</file>
         <file>dinos-icons/Carnotaurus.png</file>
@@ -52,7 +51,6 @@
         <file>dinos-icons/Dunkleosteus.png</file>
         <file>dinos-icons/Eurypterid.png</file>
         <file>dinos-icons/Gallimimus.png</file>
-        <file>dinos-icons/GiantBeaver.png</file>
         <file>dinos-icons/Gigantopithecus.png</file>
         <file>dinos-icons/Gigantosaurus.png</file>
         <file>dinos-icons/Ichthy.png</file>
@@ -79,8 +77,6 @@
         <file>dinos-icons/Raptor.png</file>
         <file>dinos-icons/Sabertooth.png</file>
         <file>dinos-icons/Sarcosaurus.png</file>
-        <file>dinos-icons/Scorpion.png</file>
-        <file>dinos-icons/SpiderMinion.png</file>
         <file>dinos-icons/Spino.png</file>
         <file>dinos-icons/Stegosaurus.png</file>
         <file>dinos-icons/TerrorBird.png</file>
@@ -89,8 +85,11 @@
         <file>dinos-icons/Titanosaur.png</file>
         <file>dinos-icons/Trex.png</file>
         <file>dinos-icons/Triceratops.png</file>
-        <file>dinos-icons/Trilobitecopy.png</file>
-        <file>dinos-icons/Turtle.png</file>
         <file>dinos-icons/WoollyRhino.png</file>
+        <file>dinos-icons/Araneo.png</file>
+        <file>dinos-icons/Onyc.png</file>
+        <file>dinos-icons/Carbonemys.png</file>
+        <file>dinos-icons/Castoroides.png</file>
+        <file>dinos-icons/Pulmonoscorpius.png</file>
     </qresource>
 </RCC>
