@@ -6,7 +6,7 @@
 #include <QDesktopServices>
 #include "defaultdinodamage.h"
 #include "dinourls.h"
-
+#include <QtMath>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -879,3 +879,42 @@ void MainWindow::on_pushButton_webLink_2_released()
 
 /*SECTION 2 OTHER TOOLS */
 
+
+void MainWindow::on_pushButton_forgecalc_released()
+{
+    int thatch(0), wood(0), sparkpowder(0), angler_gel(0);
+    int cooktime(0);  //in seconds
+    int metalingots(0);
+
+    //figure out number of metal ingots will be made and even it out so the calculation runs correctly.
+    ((ui->spinBox_metal->value() % 2) == 1) ? metalingots = (ui->spinBox_metal->value()-1) : metalingots = ui->spinBox_metal->value();
+
+    cooktime = metalingots * 20;  //20 seconds per ingot
+
+    //figure out how much thatch would be needed
+    thatch = qCeil(cooktime / 7);
+
+    //figure out how much wood would be needed
+    wood = qCeil(cooktime / 30);
+
+    //figure out how much sparkpowder would be needed
+    sparkpowder = qCeil(cooktime / 60);
+
+    //figure out how much angler gel would be needed
+    angler_gel = qCeil(cooktime / 240);
+
+    //display the results
+    int tempHours = qFloor(cooktime / 3600);
+    if (tempHours > 0) {cooktime = cooktime - (tempHours*3600);}
+    (tempHours > 0) ? ui->textBrowser_forgeResults->setText("Time to Cook: " + QString::number(tempHours) + "h" +
+                                                            QString::number(cooktime / 60) + "m" + QString::number(cooktime%60) + "s\n")
+                    : ui->textBrowser_forgeResults->setText("Time to Cook: " + QString::number(cooktime / 60) + "m" + QString::number(cooktime%60) + "s\n");
+     ui->textBrowser_forgeResults->append("This Will Require: \n  ->" + QString::number(thatch) + "  Thatch  -or-");
+     ui->textBrowser_forgeResults->append("  ->" + QString::number(wood) + "  Wood  -or-");
+     ui->textBrowser_forgeResults->append("  ->" + QString::number(sparkpowder) + "  Sparkpowder  -or-");
+     ui->textBrowser_forgeResults->append("  ->" + QString::number(angler_gel) + "  Angler Gel");
+
+
+
+
+}

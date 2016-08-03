@@ -32,6 +32,7 @@ private slots:
 
     void on_pushButton_webLink_2_released();
 
+    void on_pushButton_forgecalc_released();
 
 private:
     Ui::MainWindow *ui;
