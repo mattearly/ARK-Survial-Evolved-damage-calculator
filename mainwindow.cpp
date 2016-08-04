@@ -887,7 +887,7 @@ void MainWindow::on_pushButton_forgecalc_released()
     int metalingots(0);
 
     //figure out number of metal ingots will be made and even it out so the calculation runs correctly.
-    ((ui->spinBox_metal->value() % 2) == 1) ? metalingots = (ui->spinBox_metal->value()-1) : metalingots = ui->spinBox_metal->value();
+    ((ui->spinBox_metal->value() % 2) == 1) ? metalingots = ((ui->spinBox_metal->value()-1)/2) : metalingots = ui->spinBox_metal->value()/2;
 
     cooktime = metalingots * 20;  //20 seconds per ingot
 
@@ -906,15 +906,17 @@ void MainWindow::on_pushButton_forgecalc_released()
     //display the results
     int tempHours = qFloor(cooktime / 3600);
     if (tempHours > 0) {cooktime = cooktime - (tempHours*3600);}
-    (tempHours > 0) ? ui->textBrowser_forgeResults->setText("Time to Cook: " + QString::number(tempHours) + "h" +
-                                                            QString::number(cooktime / 60) + "m" + QString::number(cooktime%60) + "s\n")
-                    : ui->textBrowser_forgeResults->setText("Time to Cook: " + QString::number(cooktime / 60) + "m" + QString::number(cooktime%60) + "s\n");
-     ui->textBrowser_forgeResults->append("This Will Require: \n  ->" + QString::number(thatch) + "  Thatch  -or-");
-     ui->textBrowser_forgeResults->append("  ->" + QString::number(wood) + "  Wood  -or-");
-     ui->textBrowser_forgeResults->append("  ->" + QString::number(sparkpowder) + "  Sparkpowder  -or-");
-     ui->textBrowser_forgeResults->append("  ->" + QString::number(angler_gel) + "  Angler Gel");
-
-
-
+    (tempHours > 0) ? ui->textBrowser_forgeResults->setText(
+                          "<h1>Refinging Forge</h1><p>Time required to Cook: <b>"
+                          + QString::number(tempHours) + "</b> h <b>" + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </p>")
+                    : ui->textBrowser_forgeResults->setText(
+                          "<h2>Refining Forge</h2><p>Time required to Cook: "
+                          + QString::number(cooktime / 60) +"m" + QString::number(cooktime%60) + "s</p>");
+     ui->textBrowser_forgeResults->append(
+                 "<h3>Resource Options</h3><ol><li>"
+                 + QString::number(thatch) + "  Thatch</li><li>"
+                 + QString::number(wood) + "  Wood</li><li>"
+                 + QString::number(sparkpowder) + "  Sparkpowder</li><li>"
+                 + QString::number(angler_gel) + "  Angler Gel</li></ol>");
 
 }
