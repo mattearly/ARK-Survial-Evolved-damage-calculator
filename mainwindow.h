@@ -34,6 +34,10 @@ private slots:
 
     void on_pushButton_forgecalc_released();
 
+    void on_pushButton_TAMING_released();
+
+    void on_comboBox_Dinosaur_taming_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
 };

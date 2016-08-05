@@ -72,6 +72,7 @@ static const QUrl arkWiki_TYRANNOSAURUS("http://ark.gamepedia.com/Tyrannosaurus"
 static const QUrl arkWiki_WOOLLYRHINO("http://ark.gamepedia.com/Wooly_Rhino");
 
 static QUrl wikilink_2(arkWiki_defaultDino);
+static QUrl wikilink_taming(arkWiki_defaultDino);
 
 
 #endif // DINOURLS_H

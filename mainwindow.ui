@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1050</width>
-    <height>402</height>
+    <width>977</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -26,7 +26,7 @@
    <string>ARK Damage Calculator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_7">
+   <layout class="QVBoxLayout" name="verticalLayout_15">
     <item>
      <widget class="QTabWidget" name="Noneyet">
       <property name="currentIndex">
@@ -46,7 +46,7 @@
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="elideMode">
            <enum>Qt::ElideNone</enum>
@@ -58,30 +58,30 @@
            <attribute name="title">
             <string>Weapon Damage</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_8">
+           <layout class="QVBoxLayout" name="verticalLayout_21">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <item>
-                 <widget class="QPushButton" name="pushButton_webLink">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>256</width>
-                    <height>256</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
+               <widget class="QPushButton" name="pushButton_webLink">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>256</width>
+                  <height>256</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_3">
                   <item>
@@ -409,6 +409,32 @@
                    </layout>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>CALCULATE!</string>
+                  </property>
+                  <property name="shortcut">
+                   <string>Return</string>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                  <property name="default">
+                   <bool>true</bool>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -754,536 +780,544 @@
               </item>
              </layout>
             </item>
-            <item>
-             <widget class="QPushButton" name="pushButton">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>CALCULATE!</string>
-              </property>
-              <property name="shortcut">
-               <string>Return</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>true</bool>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
           <widget class="QWidget" name="tab_2">
            <attribute name="title">
             <string>Dino Damage</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_15">
+           <layout class="QVBoxLayout" name="verticalLayout_22">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <widget class="QPushButton" name="pushButton_webLink_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>256</width>
+                  <height>256</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
                 <item>
-                 <widget class="QPushButton" name="pushButton_webLink_2">
+                 <widget class="QLabel" name="label_input_2">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>256</width>
-                    <height>256</height>
-                   </size>
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::WinPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>5</number>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>INPUT</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
                   <item>
-                   <widget class="QLabel" name="label_input_2">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::WinPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Plain</enum>
-                    </property>
-                    <property name="lineWidth">
-                     <number>5</number>
-                    </property>
-                    <property name="text">
-                     <string>INPUT</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <layout class="QVBoxLayout" name="verticalLayout_10">
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_10">
-                      <item>
-                       <widget class="QLabel" name="label_Weapon_2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="frameShape">
-                         <enum>QFrame::WinPanel</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Plain</enum>
-                        </property>
-                        <property name="lineWidth">
-                         <number>2</number>
-                        </property>
-                        <property name="text">
-                         <string>Dino:</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_damagepercent_2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="frameShape">
-                         <enum>QFrame::WinPanel</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Plain</enum>
-                        </property>
-                        <property name="lineWidth">
-                         <number>2</number>
-                        </property>
-                        <property name="text">
-                         <string>Damage %</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="Line" name="line_4">
-                      <property name="orientation">
-                       <enum>Qt::Vertical</enum>
+                     <widget class="QLabel" name="label_Weapon_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::WinPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Plain</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>2</number>
+                      </property>
+                      <property name="text">
+                       <string>Dino:</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_11">
-                      <item>
-                       <widget class="QComboBox" name="comboBox_Dinosaur">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <item>
-                         <property name="text">
-                          <string>Allosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Angler</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Ankylosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Araneo (Spider)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Argentavis</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Arthrpluera</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Beelzebufo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Brontosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Carbonemys</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Carnotaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Castoroids (Giant Beaver)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Compy</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dilophosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dimetrodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dimorphodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Diplodocus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Direbear</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Direwolf</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dodo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Doedicurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dung Beetle</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dunkleosteus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gallimimus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gigatopithecus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gigantosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Ichthyosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Kairuku</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Lystrosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mammoth</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Manta</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Megaloceros</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Megalodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mesopithecus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mosasaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Oncy (Bat)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Oviraptor</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pachy</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Paraceratherium</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Parasaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pelagornis</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Phiomia</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Plesiosaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Procoptodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pteranodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pulmonoscorpius (Scorpion)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Quetzal</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Raptor</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Sabertooth</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Sarco</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Spinosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Stegosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Terror Bird</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Titanosaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Triceratops</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Tyrannosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Woolly Rhino</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent_2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="minimum">
-                         <double>100.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>650.000000000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
+                     <widget class="QLabel" name="label_damagepercent_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::WinPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Plain</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>2</number>
+                      </property>
+                      <property name="text">
+                       <string>Damage %</string>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <widget class="Line" name="line_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
                     <item>
-                     <widget class="QRadioButton" name="radioButton_ammo1_2">
-                      <property name="enabled">
-                       <bool>false</bool>
+                     <widget class="QComboBox" name="comboBox_Dinosaur">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>7</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <pointsize>10</pointsize>
                        </font>
                       </property>
-                      <property name="text">
-                       <string>Attack1</string>
-                      </property>
-                      <property name="shortcut">
-                       <string>1</string>
-                      </property>
-                      <property name="checked">
-                       <bool>true</bool>
-                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Allosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Angler</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Ankylosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Araneo (Spider)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Argentavis</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Arthrpluera</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Beelzebufo</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Brontosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Carbonemys</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Carnotaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Castoroids (Giant Beaver)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Compy</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dilophosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dimetrodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dimorphodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Diplodocus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Direbear</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Direwolf</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dodo</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Doedicurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dung Beetle</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dunkleosteus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gallimimus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gigatopithecus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gigantosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Ichthyosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Kairuku</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Lystrosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mammoth</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Manta</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Megaloceros</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Megalodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mesopithecus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mosasaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Oncy (Bat)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Oviraptor</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pachy</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Paraceratherium</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Parasaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pelagornis</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Phiomia</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Plesiosaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Procoptodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pteranodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pulmonoscorpius (Scorpion)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Quetzal</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Raptor</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Sabertooth</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Sarco</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Spinosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Stegosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Terror Bird</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Titanosaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Triceratops</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Tyrannosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Woolly Rhino</string>
+                       </property>
+                      </item>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QRadioButton" name="radioButton_ammo2_2">
-                      <property name="enabled">
-                       <bool>false</bool>
+                     <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>7</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <pointsize>10</pointsize>
                        </font>
                       </property>
-                      <property name="text">
-                       <string>Attack2</string>
+                      <property name="minimum">
+                       <double>100.000000000000000</double>
                       </property>
-                      <property name="shortcut">
-                       <string>2</string>
-                      </property>
-                      <property name="checked">
-                       <bool>false</bool>
+                      <property name="maximum">
+                       <double>650.000000000000000</double>
                       </property>
                      </widget>
                     </item>
                    </layout>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <widget class="QRadioButton" name="radioButton_ammo1_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>7</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Attack1</string>
+                    </property>
+                    <property name="shortcut">
+                     <string>1</string>
+                    </property>
+                    <property name="checked">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QRadioButton" name="radioButton_ammo2_2">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>7</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Attack2</string>
+                    </property>
+                    <property name="shortcut">
+                     <string>2</string>
+                    </property>
+                    <property name="checked">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>CALCULATE!</string>
+                  </property>
+                  <property name="shortcut">
+                   <string>Return</string>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
+                  <property name="default">
+                   <bool>true</bool>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -1629,32 +1663,6 @@
               </item>
              </layout>
             </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_2">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>CALCULATE!</string>
-              </property>
-              <property name="shortcut">
-               <string>Return</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>true</bool>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
          </widget>
@@ -1665,7 +1673,7 @@
        <attribute name="title">
         <string>Other Tools</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_31">
+       <layout class="QVBoxLayout" name="verticalLayout_23">
         <item>
          <widget class="QTabWidget" name="tabWidget_forge">
           <property name="tabPosition">
@@ -1675,7 +1683,7 @@
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <property name="elideMode">
            <enum>Qt::ElideNone</enum>
@@ -1687,72 +1695,615 @@
            <attribute name="title">
             <string>Refining Forge Calculator</string>
            </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <layout class="QVBoxLayout" name="verticalLayout_17">
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_17">
+               <widget class="QLabel" name="label_metal">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Ebrima</family>
+                  <pointsize>18</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                  <underline>true</underline>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>RAW METAL</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBox_metal">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Ebrima</family>
+                  <pointsize>105</pointsize>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="wrapping">
+                 <bool>false</bool>
+                </property>
+                <property name="frame">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="readOnly">
+                 <bool>false</bool>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="showGroupSeparator" stdset="0">
+                 <bool>false</bool>
+                </property>
+                <property name="minimum">
+                 <number>2</number>
+                </property>
+                <property name="maximum">
+                 <number>1400</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_forgecalc">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>CALCULATE!</string>
+                </property>
+                <property name="shortcut">
+                 <string>Return</string>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="default">
+                 <bool>true</bool>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_12">
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>8</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextBrowser" name="textBrowser_forgeResults">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Harrington</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Harrington'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-style:italic;&quot;&gt;All the calculations will be here!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>Taming Calculator</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_20">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QPushButton" name="pushButton_webLink_taming">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>256</width>
+                  <height>256</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_19">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
                   <item>
-                   <widget class="QLabel" name="label_metal">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Arial Narrow</family>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>RAW METAL:</string>
-                    </property>
-                   </widget>
+                   <layout class="QVBoxLayout" name="verticalLayout_8">
+                    <item>
+                     <widget class="QLabel" name="label_Dino">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::WinPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Plain</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>2</number>
+                      </property>
+                      <property name="text">
+                       <string>Dino:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_tamingLevel">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::WinPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Plain</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>2</number>
+                      </property>
+                      <property name="text">
+                       <string>Level:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_tameSpeed">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::WinPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Plain</enum>
+                      </property>
+                      <property name="lineWidth">
+                       <number>2</number>
+                      </property>
+                      <property name="text">
+                       <string>Server Tame Speed:</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </item>
                   <item>
-                   <widget class="QSpinBox" name="spinBox_metal">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <family>Impact</family>
-                      <pointsize>24</pointsize>
-                     </font>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                    <property name="minimum">
-                     <number>2</number>
-                    </property>
-                    <property name="maximum">
-                     <number>1400</number>
-                    </property>
-                   </widget>
+                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                    <item>
+                     <widget class="QComboBox" name="comboBox_Dinosaur_taming">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Allosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Angler</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Ankylosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Araneo (Spider)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Argentavis</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Arthrpluera</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Beelzebufo</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Brontosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Carbonemys</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Carnotaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Castoroids (Giant Beaver)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Compy</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dilophosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dimetrodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dimorphodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Diplodocus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Direbear</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Direwolf</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dodo</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Doedicurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dung Beetle</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Dunkleosteus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gallimimus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gigatopithecus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Gigantosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Ichthyosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Kairuku</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Lystrosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mammoth</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Manta</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Megaloceros</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Megalodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mesopithecus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Mosasaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Oncy (Bat)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Oviraptor</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pachy</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Paraceratherium</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Parasaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pelagornis</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Phiomia</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Plesiosaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Procoptodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pteranodon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Pulmonoscorpius (Scorpion)</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Quetzal</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Raptor</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Sabertooth</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Sarco</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Spinosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Stegosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Terror Bird</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Titanosaur</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Triceratops</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Tyrannosaurus</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Woolly Rhino</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="doubleSpinBox_dinoLevel">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="accelerated">
+                       <bool>true</bool>
+                      </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="minimum">
+                       <double>1.000000000000000</double>
+                      </property>
+                      <property name="maximum">
+                       <double>150.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="doubleSpinBox_serverTameSpeed">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </item>
                  </layout>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_forgecalc">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
+                 <widget class="QPushButton" name="pushButton_TAMING">
                   <property name="font">
                    <font>
                     <pointsize>10</pointsize>
@@ -1780,532 +2331,6 @@
                </layout>
               </item>
               <item>
-               <widget class="QTextBrowser" name="textBrowser_forgeResults">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-style:italic;&quot;&gt;All the calculations will be here!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_6">
-           <attribute name="title">
-            <string>Taming Calculator</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_24">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_16">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_17">
-                <item>
-                 <widget class="QPushButton" name="pushButton_webLink_4">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>256</width>
-                    <height>256</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_25">
-                  <item>
-                   <widget class="QLabel" name="label_input_4">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="font">
-                     <font>
-                      <pointsize>12</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="frameShape">
-                     <enum>QFrame::WinPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Plain</enum>
-                    </property>
-                    <property name="lineWidth">
-                     <number>5</number>
-                    </property>
-                    <property name="text">
-                     <string>INPUT</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_18">
-                    <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_26">
-                      <item>
-                       <widget class="QLabel" name="label_Weapon_4">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="frameShape">
-                         <enum>QFrame::WinPanel</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Plain</enum>
-                        </property>
-                        <property name="lineWidth">
-                         <number>2</number>
-                        </property>
-                        <property name="text">
-                         <string>Dino:</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_damagepercent_4">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="frameShape">
-                         <enum>QFrame::WinPanel</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Plain</enum>
-                        </property>
-                        <property name="lineWidth">
-                         <number>2</number>
-                        </property>
-                        <property name="text">
-                         <string>Damage %</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="Line" name="line_10">
-                      <property name="orientation">
-                       <enum>Qt::Vertical</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <layout class="QVBoxLayout" name="verticalLayout_27">
-                      <item>
-                       <widget class="QComboBox" name="comboBox_Dinosaur_2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <item>
-                         <property name="text">
-                          <string>Allosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Angler</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Ankylosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Araneo (Spider)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Argentavis</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Arthrpluera</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Beelzebufo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Brontosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Carbonemys</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Carnotaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Castoroids (Giant Beaver)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Compy</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dilophosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dimetrodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dimorphodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Diplodocus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Direbear</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Direwolf</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dodo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Doedicurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dung Beetle</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Dunkleosteus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gallimimus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gigatopithecus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Gigantosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Ichthyosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Kairuku</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Lystrosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mammoth</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Manta</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Megaloceros</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Megalodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mesopithecus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Mosasaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Oncy (Bat)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Oviraptor</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pachy</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Paraceratherium</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Parasaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pelagornis</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Phiomia</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Plesiosaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Procoptodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pteranodon</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Pulmonoscorpius (Scorpion)</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Quetzal</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Raptor</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Sabertooth</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Sarco</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Spinosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Stegosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Terror Bird</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Titanosaur</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Triceratops</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Tyrannosaurus</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>Woolly Rhino</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QDoubleSpinBox" name="doubleSpinBox_damagepercent_4">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="minimum">
-                         <double>100.000000000000000</double>
-                        </property>
-                        <property name="maximum">
-                         <double>650.000000000000000</double>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_19">
-                    <item>
-                     <widget class="QRadioButton" name="radioButton_ammo1_4">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>7</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Attack1</string>
-                      </property>
-                      <property name="shortcut">
-                       <string>1</string>
-                      </property>
-                      <property name="checked">
-                       <bool>true</bool>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QRadioButton" name="radioButton_ammo2_4">
-                      <property name="enabled">
-                       <bool>false</bool>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>7</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Attack2</string>
-                      </property>
-                      <property name="shortcut">
-                       <string>2</string>
-                      </property>
-                      <property name="checked">
-                       <bool>false</bool>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
                <widget class="Line" name="line_11">
                 <property name="frameShadow">
                  <enum>QFrame::Plain</enum>
@@ -2319,359 +2344,9 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="verticalLayout_28">
-                <item>
-                 <widget class="QLabel" name="label_output_4">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>12</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::WinPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Plain</enum>
-                  </property>
-                  <property name="lineWidth">
-                   <number>5</number>
-                  </property>
-                  <property name="text">
-                   <string>OUTPUT</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_20">
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_29">
-                    <item>
-                     <widget class="QLabel" name="label_RawDamage_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::WinPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>2</number>
-                      </property>
-                      <property name="text">
-                       <string>Raw Damage: </string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_InstantTorpor_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::WinPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>2</number>
-                      </property>
-                      <property name="text">
-                       <string>Instant Torpor:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_TorporOverTime_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::WinPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>2</number>
-                      </property>
-                      <property name="text">
-                       <string>Topor Over Time:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="label_TotalTorpor_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::WinPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>2</number>
-                      </property>
-                      <property name="text">
-                       <string>Total Torpor: </string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="Line" name="line_12">
-                    <property name="orientation">
-                     <enum>Qt::Vertical</enum>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_30">
-                    <item>
-                     <widget class="QLCDNumber" name="lcdNumber_rawdamage_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>180</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="autoFillBackground">
-                       <bool>true</bool>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>1</number>
-                      </property>
-                      <property name="digitCount">
-                       <number>7</number>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLCDNumber" name="lcdNumber_InstantTorpor_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>180</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="autoFillBackground">
-                       <bool>true</bool>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>1</number>
-                      </property>
-                      <property name="digitCount">
-                       <number>7</number>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLCDNumber" name="lcdNumber_TorporOverTime_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>180</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="autoFillBackground">
-                       <bool>true</bool>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>1</number>
-                      </property>
-                      <property name="digitCount">
-                       <number>7</number>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLCDNumber" name="lcdNumber_TotalTorpor_4">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>180</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                        <kerning>true</kerning>
-                       </font>
-                      </property>
-                      <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                      </property>
-                      <property name="autoFillBackground">
-                       <bool>true</bool>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Plain</enum>
-                      </property>
-                      <property name="lineWidth">
-                       <number>1</number>
-                      </property>
-                      <property name="digitCount">
-                       <number>7</number>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
+               <widget class="QTextBrowser" name="textBrowser_tamingOutput"/>
               </item>
              </layout>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_4">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>CALCULATE!</string>
-              </property>
-              <property name="shortcut">
-               <string>Return</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-              <property name="default">
-               <bool>true</bool>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
             </item>
            </layout>
           </widget>

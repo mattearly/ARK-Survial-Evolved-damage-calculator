@@ -14,9 +14,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 //    this->setWindowIcon(QIcon(":/taskbar/arkdc.ico"));
     ui->pushButton_webLink->setIcon(QIcon(":/weapons/weapons-icons/Stone_Pick.png"));
-    ui->pushButton_webLink->setIconSize(QSize(248,248));
+    ui->pushButton_webLink->setIconSize(QSize(250,250));
     ui->pushButton_webLink_2->setIcon(QIcon(":/dinos/dinos-icons/Allosaurus.png"));
-    ui->pushButton_webLink_2->setIconSize(QSize(248,248));
+    ui->pushButton_webLink_2->setIconSize(QSize(250,250));
+    ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Allosaurus.png"));
+    ui->pushButton_webLink_taming->setIconSize(QSize(250,250));
 }
 
 MainWindow::~MainWindow()
@@ -24,8 +26,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-/*SECTION 1 DAMAGES */
+    /*SECTION 1 DAMAGES */
 
 //WEAPON DAMAGE
 
@@ -877,8 +878,9 @@ void MainWindow::on_pushButton_webLink_2_released()
     QDesktopServices::openUrl(wikilink_2);
 }
 
-/*SECTION 2 OTHER TOOLS */
+    /*SECTION 2 OTHER TOOLS */
 
+//FORGE CALCULATOR
 
 void MainWindow::on_pushButton_forgecalc_released()
 {
@@ -892,31 +894,277 @@ void MainWindow::on_pushButton_forgecalc_released()
     cooktime = metalingots * 20;  //20 seconds per ingot
 
     //figure out how much thatch would be needed
-    thatch = qCeil(cooktime / 7);
+    thatch = qCeil(cooktime / 7.f);
 
     //figure out how much wood would be needed
-    wood = qCeil(cooktime / 30);
+    wood = qCeil(cooktime / 30.f);
 
     //figure out how much sparkpowder would be needed
-    sparkpowder = qCeil(cooktime / 60);
+    sparkpowder = qCeil(cooktime / 60.f);
 
     //figure out how much angler gel would be needed
-    angler_gel = qCeil(cooktime / 240);
+    angler_gel = qCeil(cooktime / 240.f);
 
     //display the results
     int tempHours = qFloor(cooktime / 3600);
     if (tempHours > 0) {cooktime = cooktime - (tempHours*3600);}
     (tempHours > 0) ? ui->textBrowser_forgeResults->setText(
-                          "<h1>Refinging Forge</h1><p>Time required to Cook: <b>"
-                          + QString::number(tempHours) + "</b> h <b>" + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </p>")
+                          "<h1>Refinging Forge</h1><ul><li>Time required to Cook: <b>"
+                          + QString::number(tempHours) + "</b> h <b>" + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </li></ul>")
                     : ui->textBrowser_forgeResults->setText(
-                          "<h2>Refining Forge</h2><p>Time required to Cook: "
-                          + QString::number(cooktime / 60) +"m" + QString::number(cooktime%60) + "s</p>");
+                          "<h1>Refinging Forge</h1><p>Time required to Cook: <b>"
+                          + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </p>");
      ui->textBrowser_forgeResults->append(
-                 "<h3>Resource Options</h3><ol><li>"
-                 + QString::number(thatch) + "  Thatch</li><li>"
-                 + QString::number(wood) + "  Wood</li><li>"
-                 + QString::number(sparkpowder) + "  Sparkpowder</li><li>"
-                 + QString::number(angler_gel) + "  Angler Gel</li></ol>");
+                 "<h3>Resource Options</h3><ol><li><b>"
+                 + QString::number(thatch) + "  </b>Thatch</li><li><b>"
+                 + QString::number(wood) + "  </b>Wood</li><li><b>"
+                 + QString::number(sparkpowder) + "  </b>Sparkpowder</li><li><b>"
+                 + QString::number(angler_gel) + "  </b>Angler Gel</li></ol>");
+}
 
+//TAMING CALCULATOR
+
+void MainWindow::on_pushButton_TAMING_released()
+{
+
+    int dinoLevel = ui->doubleSpinBox_dinoLevel->value();
+    int dinoNumber = ui->comboBox_Dinosaur_taming->currentIndex();
+    float tameSpeed = ui->doubleSpinBox_serverTameSpeed->value();
+
+}
+
+void MainWindow::on_comboBox_Dinosaur_taming_currentIndexChanged(int index)
+{
+    if (ui->doubleSpinBox_dinoLevel->value() != 1) {
+        ui->doubleSpinBox_dinoLevel->setValue(1.00);
+    }
+
+    switch (index) {
+    case 0:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Allosaurus.png"));
+        wikilink_taming = arkWiki_ALLOSAURUS;
+        break;
+    case 1:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Angler.png"));
+        wikilink_taming = arkWiki_ANGLER;
+        break;
+    case 2:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Ankylosaurus.png"));
+        wikilink_taming = arkWiki_ANKYLOSAURUS;
+        break;
+    case 3:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Araneo.png"));
+        wikilink_taming = arkWiki_ARANEO;
+        break;
+    case 4:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Argentavis.png"));
+        wikilink_taming = arkWiki_ARGENTAVIS;
+        break;
+    case 5:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Arthropluera.png"));
+        wikilink_taming = arkWiki_ARTHROPLUERA;
+        break;
+    case 6:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Beelzebufo.png"));
+        wikilink_taming = arkWiki_BEELZEBUFO;
+        break;
+    case 7:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Brontosaurus.png"));
+        wikilink_taming = arkWiki_BRONTOSAURUS;
+        break;
+    case 8:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Carbonemys.png"));
+        wikilink_taming = arkWiki_CARBONEMYS;
+        break;
+    case 9:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Carnotaurus.png"));
+        wikilink_taming = arkWiki_CARNOTAURUS;
+        break;
+    case 10:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Castoroides.png"));
+        wikilink_taming = arkWiki_CASTOROIDES;
+        break;
+    case 11:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Compy.png"));
+        wikilink_taming = arkWiki_COMPY;
+        break;
+    case 12:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Dilophosaurus.png"));
+        wikilink_taming = arkWiki_DILOPHOSAURUS;
+        break;
+    case 13:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Dimetrodon.png"));
+        wikilink_taming = arkWiki_DIMETRODON;
+        break;
+    case 14:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Dimorphodon.png"));
+        wikilink_taming = arkWiki_DIMORPHODON;
+        break;
+    case 15:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Diplodocus.png"));
+        wikilink_taming = arkWiki_DIPLODOCUS;
+        break;
+    case 16:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Direbear.png"));
+        wikilink_taming = arkWiki_DIREBEAR;
+        break;
+    case 17:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Direwolf.png"));
+        wikilink_taming = arkWiki_DIREWOLF;
+        break;
+    case 18:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Dodo.png"));
+        wikilink_taming = arkWiki_DODO;
+        break;
+    case 19:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Doedicurus.png"));
+        wikilink_taming = arkWiki_DOEDICURUS;
+        break;
+    case 20:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/DungBeetle.png"));
+        wikilink_taming = arkWiki_DUNGBEETLE;
+        break;
+    case 21:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Dunkleosteus.png"));
+        wikilink_taming = arkWiki_DUNKLEOSTEUS;
+        break;
+    case 22:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Gallimimus.png"));
+        wikilink_taming = arkWiki_GALLIMIMUS;
+        break;
+    case 23:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Gigantopithecus.png"));
+        wikilink_taming = arkWiki_GIGANTOPITHECUS;
+        break;
+    case 24:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Gigantosaurus.png"));
+        wikilink_taming = arkWiki_GIGANTOSAURUS;
+        break;
+    case 25:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Ichthy.png"));
+        wikilink_taming = arkWiki_ICHTHYOSAURUS;
+        break;
+    case 26:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Kairuku.png"));
+        wikilink_taming = arkWiki_KAIRUKU;
+        break;
+    case 27:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Lystrosaurus.png"));
+        wikilink_taming = arkWiki_LYSTROSAURUS;
+        break;
+    case 28:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Mammoth.png"));
+        wikilink_taming = arkWiki_MAMMOTH;
+        break;
+    case 29:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Manta.png"));
+        wikilink_taming = arkWiki_MANTA;
+        break;
+    case 30:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Megaloceros.png"));
+        wikilink_taming = arkWiki_MEGALOCEROS;
+        break;
+    case 31:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Megalodon.png"));
+        wikilink_taming = arkWiki_MEGALODON;
+        break;
+    case 32:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Mesopithecus.png"));
+        wikilink_taming = arkWiki_MESOPITHECUS;
+        break;
+    case 33:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Mosasaurus.png"));
+        wikilink_taming = arkWiki_MOSASAURUS;
+        break;
+    case 34:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Onyc.png"));
+        wikilink_taming = arkWiki_ONYC;
+        break;
+    case 35:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Oviraptor.png"));
+        wikilink_taming = arkWiki_OVIRAPTOR;
+        break;
+    case 36:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Pachy.png"));
+        wikilink_taming = arkWiki_PACHY;
+        break;
+    case 37:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Paraceratherium.png"));
+        wikilink_taming = arkWiki_PARACERATHERIUM;
+        break;
+    case 38:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Parasaur.png"));
+        wikilink_taming = arkWiki_PARASAUR;
+        break;
+    case 39:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Pelagornis.png"));
+        wikilink_taming = arkWiki_PELAGORNIS;
+        break;
+    case 40:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Phiomia.png"));
+        wikilink_taming = arkWiki_PHIOMIA;
+        break;
+    case 41:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Plesiosaur.png"));
+        wikilink_taming = arkWiki_PLESIOSAUR;
+        break;
+    case 42:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Procoptodon.png"));
+        wikilink_taming = arkWiki_PROCOPTODON;
+        break;
+    case 43:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Pterosaur.png"));
+        wikilink_taming = arkWiki_PTERANODON;
+        break;
+    case 44:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Pulmonoscorpius.png"));
+        wikilink_taming = arkWiki_PULMONOSCORPIUS;
+        break;
+    case 45:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Quetzal.png"));
+        wikilink_taming = arkWiki_QUETZAL;
+        break;
+    case 46:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Raptor.png"));
+        wikilink_taming = arkWiki_RAPTOR;
+        break;
+    case 47:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Sabertooth.png"));
+        wikilink_taming = arkWiki_SABERTOOTH;
+        break;
+    case 48:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Sarcosaurus.png"));
+        wikilink_taming = arkWiki_SARCO;
+        break;
+    case 49:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Spino.png"));
+        wikilink_taming = arkWiki_SPINOSAURUS;
+        break;
+    case 50:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Stegosaurus.png"));
+        wikilink_taming = arkWiki_STEGOSAURUS;
+        break;
+    case 51:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/TerrorBird.png"));
+        wikilink_taming = arkWiki_TERRORBIRD;
+        break;
+    case 52:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Titanosaur.png"));
+        wikilink_taming = arkWiki_TITANOSAUR;
+        break;
+    case 53:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Triceratops.png"));
+        wikilink_taming = arkWiki_TRICERATOPS;
+        break;
+    case 54:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/Trex.png"));
+        wikilink_taming = arkWiki_TYRANNOSAURUS;
+        break;
+    case 55:
+        ui->pushButton_webLink_taming->setIcon(QIcon(":/dinos/dinos-icons/WoollyRhino.png"));
+        wikilink_taming = arkWiki_WOOLLYRHINO;
+        break;
+    default:
+        break;
+    }
 }
