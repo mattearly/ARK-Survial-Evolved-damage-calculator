@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>977</width>
+    <width>1080</width>
     <height>366</height>
    </rect>
   </property>
@@ -2295,6 +2295,9 @@ p, li { white-space: pre-wrap; }
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="minimum">
+                       <double>1.000000000000000</double>
                       </property>
                      </widget>
                     </item>

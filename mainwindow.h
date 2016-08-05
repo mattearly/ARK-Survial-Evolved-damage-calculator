@@ -38,6 +38,8 @@ private slots:
 
     void on_comboBox_Dinosaur_taming_currentIndexChanged(int index);
 
+    void on_pushButton_webLink_taming_released();
+
 private:
     Ui::MainWindow *ui;
 };

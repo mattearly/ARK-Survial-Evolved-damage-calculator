@@ -4,7 +4,7 @@
 
 //dinos that cannot be tamed have been commented out as the data won't be used currently
 
-static const QUrl arkWiki_defaultDino("http://ark.gamepedia.com/Dinosaurs");
+static const QUrl arkWiki_defaultDino("http://ark.gamepedia.com/Allosaurus");
 static const QUrl arkWiki_ALLOSAURUS("http://ark.gamepedia.com/Allosaurus");
 static const QUrl arkWiki_ANGLER("http://ark.gamepedia.com/Angler");
 static const QUrl arkWiki_ANKYLOSAURUS("http://ark.gamepedia.com/Ankylosaurus");

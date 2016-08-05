@@ -7,9 +7,7 @@
 #include "defaultdinodamage.h"
 #include "dinourls.h"
 #include <QtMath>
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 //    this->setWindowIcon(QIcon(":/taskbar/arkdc.ico"));
@@ -26,9 +24,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-    /*SECTION 1 DAMAGES */
+    /* -----------SECTION 1 : DAMAGES----------- */
 
-//WEAPON DAMAGE
+        /* 1. WEAPON DAMAGE */
 
 void MainWindow::on_pushButton_released()
 {
@@ -404,7 +402,7 @@ void MainWindow::on_pushButton_webLink_released()
     QDesktopServices::openUrl(wikilink);
 }
 
-//DINOSAUR DAMAGE
+        /* 2. DINOSAUR DAMAGE */
 
 void MainWindow::on_pushButton_2_released()
 {
@@ -878,9 +876,9 @@ void MainWindow::on_pushButton_webLink_2_released()
     QDesktopServices::openUrl(wikilink_2);
 }
 
-    /*SECTION 2 OTHER TOOLS */
+    /* -----------SECTION 2 : OTHER TOOLS----------- */
 
-//FORGE CALCULATOR
+        /* 1. FORGE CALCULATOR */
 
 void MainWindow::on_pushButton_forgecalc_released()
 {
@@ -906,13 +904,17 @@ void MainWindow::on_pushButton_forgecalc_released()
     angler_gel = qCeil(cooktime / 240.f);
 
     //display the results
-    int tempHours = qFloor(cooktime / 3600);
-    if (tempHours > 0) {cooktime = cooktime - (tempHours*3600);}
+    int tempHours = qFloor(cooktime / 3600); //check and convert to hours
+    if (tempHours > 0) {cooktime = cooktime - (tempHours*3600);} //if it's taking over an hour, take those hours off the minutes
     (tempHours > 0) ? ui->textBrowser_forgeResults->setText(
-                          "<h1>Refinging Forge</h1><ul><li>Time required to Cook: <b>"
+                          "<h1>Refinging Forge</h1><ul><li>Amount of Metal Ingots to be cooked: <b>"
+                          + QString::number(metalingots)
+                          + "</b></li><li>Time required to Cook: <b>"
                           + QString::number(tempHours) + "</b> h <b>" + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </li></ul>")
                     : ui->textBrowser_forgeResults->setText(
-                          "<h1>Refinging Forge</h1><p>Time required to Cook: <b>"
+                          "<h1>Refinging Forge</h1><li>Amount of Metal Ingots to be cooked: <b>"
+                          + QString::number(metalingots)
+                          + "</b></li><li>Time required to Cook: <b>"
                           + QString::number(cooktime / 60) + "</b> m <b>" + QString::number(cooktime%60) + "</b> s </p>");
      ui->textBrowser_forgeResults->append(
                  "<h3>Resource Options</h3><ol><li><b>"
@@ -922,7 +924,7 @@ void MainWindow::on_pushButton_forgecalc_released()
                  + QString::number(angler_gel) + "  </b>Angler Gel</li></ol>");
 }
 
-//TAMING CALCULATOR
+        /* 2. TAMING CALCULATOR */
 
 void MainWindow::on_pushButton_TAMING_released()
 {
@@ -930,7 +932,227 @@ void MainWindow::on_pushButton_TAMING_released()
     int dinoLevel = ui->doubleSpinBox_dinoLevel->value();
     int dinoNumber = ui->comboBox_Dinosaur_taming->currentIndex();
     float tameSpeed = ui->doubleSpinBox_serverTameSpeed->value();
+    QString dinoName = "";
+    QString n1_kibble = "";
+    int n1_amount(0);
+    QString n2_food = "";
+    int n2_amount(0);
+    QString n3_food = "";
+    int n3_amount(0);
+    QString n4_food = "";
+    int n4_amount(0);
+    QString nCrap_otherFood = "";
 
+    switch (dinoNumber) {
+    case 0:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ALLOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 1:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ANGLER) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 2:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ANKYLOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 3:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ARANEO) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 4:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ARGENTAVIS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 5:
+//        (ui->radioButton_ammo1_2->isChecked()) ? ui->lcdNumber_rawdamage_2->display((BaseDamage_ARTHROPLUERA) * (ui->doubleSpinBox_damagepercent_2->value() / 100))
+//                                               :  ui->lcdNumber_rawdamage_2->display((BaseDamage_ARTHROPLUERA_altFire) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 6:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+//        ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+//        ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_BEELZEBUFO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+        break;
+    case 7:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_BRONTOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 8:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_CARBONEMYS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 9:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_CARNOTAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 10:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_CASTOROIDES) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 11:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_COMPY) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 12:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DILOPHOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 13:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DIMETRODON) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 14:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DIMORPHODON) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 15:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DIPLODOCUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 16:
+//        (ui->radioButton_ammo1_2->isChecked()) ? ui->lcdNumber_rawdamage_2->display((BaseDamage_DIREBEAR) * (ui->doubleSpinBox_damagepercent_2->value() / 100))
+//                                               : ui->lcdNumber_rawdamage_2->display((BaseDamage_DIREBEAR_altFire) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 17:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DIREWOLF) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 18:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DODO) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 19:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DOEDICURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 20:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DUNGBEETLE) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 21:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_DUNKLEOSTEUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 22:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_GALLIMIMUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 23:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_GIGANTOPITHECUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 24:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_GIGANTOSAURUS_tamed) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 25:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ICHTHYOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 26:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_KAIRUKU) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 27:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_LYSTROSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 28:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MAMMOTH) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 29:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MANTA) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 30:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MEGALOCEROS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 31:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MEGALODON) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 32:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MESOPITHECUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 33:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_MOSASAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 34:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_ONYC) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 35:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_OVIRAPTOR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 36:
+//        if (ui->radioButton_ammo1_2->isChecked()) {
+//            ui->lcdNumber_rawdamage_2->display((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+//            ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100)));
+//            ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PACHY) * (ui->doubleSpinBox_damagepercent_2->value() / 100)));
+//       } else {
+//            ui->lcdNumber_rawdamage_2->display((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+//            ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3.5);
+//            ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PACHY_charge) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3.5);
+//        }
+        break;
+    case 37:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PARACERATHERIUM) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 38:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PARASAUR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 39:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PELAGORNIS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 40:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PHIOMIA) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 41:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PLESIOSAUR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 42:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PROCOPTODON) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 43:
+//        (ui->radioButton_ammo1_2->isChecked()) ? ui->lcdNumber_rawdamage_2->display((BaseDamage_PTERANODON) * (ui->doubleSpinBox_damagepercent_2->value() / 100))
+//                                               : ui->lcdNumber_rawdamage_2->display((BaseDamage_PTERANODON_rollAttack) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 44:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+//        ui->lcdNumber_TorporOverTime_2->display(((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+//        ui->lcdNumber_TotalTorpor_2->display(((BaseDamage_PULMONOSCORPIUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*3);
+        break;
+    case 45:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_QUETZAL) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 46:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_RAPTOR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 47:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_SABERTOOTH) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 48:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_SARCO) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 49:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_SPINOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 50:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_STEGOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 51:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_TERRORBIRD) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 52:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_TITANOSAUR) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 53:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_TRICERATOPS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 54:
+//        ui->lcdNumber_rawdamage_2->display((BaseDamage_TYRANNOSAURUS) * (ui->doubleSpinBox_damagepercent_2->value() / 100));
+        break;
+    case 55:
+//        (ui->radioButton_ammo1_2->isChecked()) ? ui->lcdNumber_rawdamage_2->display((BaseDamage_WOOLLYRHINO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))
+//            : ui->lcdNumber_rawdamage_2->display(((BaseDamage_WOOLLYRHINO) * (ui->doubleSpinBox_damagepercent_2->value() / 100))*12.5);
+        break;
+    default:
+        break;
+    }
+//testing
+    dinoName = "Pteradon";
+    n1_kibble = "Dodo";
+    n1_amount = 10;
+    n2_food = "Raw Prime Meat";
+    n2_amount = 20;
+    n3_food = "Cooked Prime";
+    n3_amount = 30;
+    n4_food = "Raw Meat";
+    n4_amount = 40;
+    nCrap_otherFood = "Cooked Meat";
+//end testing
+
+
+    ui->textBrowser_tamingOutput->setText(
+                "<h1>Taming Level " + QString::number(dinoLevel) + " " + dinoName + "</h1>"
+                + "<ol><li>" + n1_kibble + " : <b>" + QString::number(n1_amount) + "</b>x needed.</li>"
+                + "<li>" + n2_food + " : <b>" + QString::number(n2_amount) + "</b>x needed.</li>"
+                + "<li>" + n3_food + " : <b>" + QString::number(n3_amount) + "</b>x needed.</li>"
+                + "<li>" + n4_food + " : <b>" + QString::number(n4_amount) + "</b>x needed.</li>"
+                + "<li>" + nCrap_otherFood + " : <b>TONS</b>x needed.</li></ol>"
+                );
 }
 
 void MainWindow::on_comboBox_Dinosaur_taming_currentIndexChanged(int index)
@@ -1167,4 +1389,10 @@ void MainWindow::on_comboBox_Dinosaur_taming_currentIndexChanged(int index)
     default:
         break;
     }
+}
+
+void MainWindow::on_pushButton_webLink_taming_released()
+{
+    QDesktopServices::openUrl(wikilink_taming);
+
 }

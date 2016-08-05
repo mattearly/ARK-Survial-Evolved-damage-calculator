@@ -2,7 +2,7 @@
 #define WEAPONURLS_H
 #include <QUrl>
 
-static const QUrl arkWiki_Default("http://ark.gamepedia.com/Weapons");
+static const QUrl arkWiki_Default("http://ark.gamepedia.com/Stone_Pick");
 static const QUrl arkWiki_Stone_Pick("http://ark.gamepedia.com/Stone_Pick");
 static const QUrl arkWiki_Stone_Hatchet("http://ark.gamepedia.com/Stone_Hatchet");
 static const QUrl arkWiki_Torch("http://ark.gamepedia.com/Torch");
