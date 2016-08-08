@@ -928,7 +928,10 @@ void MainWindow::on_pushButton_forgecalc_released()
 
 void MainWindow::on_pushButton_TAMING_released()
 {
+    QUrl tamingpage("http://ark.crumplecorn.com/taming/");
+    QDesktopServices::openUrl(tamingpage);
 
+    /*
     int dinoLevel = ui->doubleSpinBox_dinoLevel->value();
     int dinoNumber = ui->comboBox_Dinosaur_taming->currentIndex();
     float tameSpeed = ui->doubleSpinBox_serverTameSpeed->value();
@@ -1143,8 +1146,6 @@ void MainWindow::on_pushButton_TAMING_released()
     n4_amount = 40;
     nCrap_otherFood = "Cooked Meat";
 //end testing
-
-
     ui->textBrowser_tamingOutput->setText(
                 "<h1>Taming Level " + QString::number(dinoLevel) + " " + dinoName + "</h1>"
                 + "<ol><li>" + n1_kibble + " : <b>" + QString::number(n1_amount) + "</b>x needed.</li>"
@@ -1153,7 +1154,9 @@ void MainWindow::on_pushButton_TAMING_released()
                 + "<li>" + n4_food + " : <b>" + QString::number(n4_amount) + "</b>x needed.</li>"
                 + "<li>" + nCrap_otherFood + " : <b>TONS</b>x needed.</li></ol>"
                 );
+                */
 }
+
 
 void MainWindow::on_comboBox_Dinosaur_taming_currentIndexChanged(int index)
 {
