@@ -27,3 +27,5 @@ RESOURCES += \
     icons.qrc
 
 win32:RC_ICONS += arkdc.ico
+
+CONFIG += c++11

@@ -16,6 +16,8 @@ This is a lightweight program to check out how much pwn your weapons do in ARK. 
 	* This main '.exe' file must stay in the folder with the .dll's and other folders.  You can make shortcuts to it or pin it to your start menu. 
 3. Once running: use the weapon drop-down to select your weapon, change the percent, then click Calculate! (or press Enter). Additionally you can click the weapon picture on the left to visit the wiki page about this weapon.
 
+* Compile (any OS) from source using QtCreator
+
 #### Changelog:  
 *  7/5/2016 v0005 release   
 	*  fixed rocket launcher damage.   
